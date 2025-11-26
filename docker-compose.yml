@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+
+# Note: Azure Service Bus and Event Hubs are cloud services and are not emulated by this compose. Use RabbitMQ locally to test messaging patterns when Azure resources are not available.
